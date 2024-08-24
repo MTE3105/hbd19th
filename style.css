@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(#4c0c0c, #250702);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.bubbles {
+    position: absolute;
+    display: flex;
+
+}
+
+.bubbles span {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: #f00;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #f009, 0 0 15px #f00, 0 0 20px #f00;
+    animation: animate 8s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: pink;
+    box-shadow: 0 0 0 10px rgb(231, 113, 133), 0 0 15px pink, 0 0 20px pink;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 1s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front,
+.back {
+    border: 5px ridge black;
+    border-left: 5px solid black;
+    padding: auto;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 1s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 1s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 40px;
+    color: gray;
+}
+
+#p1 {
+    z-index: 4;
+}
+
+#p2 {
+    z-index: 3;
+}
+
+#p3 {
+    z-index: 2;
+}
+
+#p4 {
+    z-index: 1;
+}
+
+#f1 {
+    background-image: url(bgfront1.jpg);
+    background-size: 346px;
+}
+
+#f2 {
+    background-image: url(ngfront222.jpg);
+    background-size: 340px;
+}
+
+
+#f3 {
+    background-image: url(bgfront333333.jpg);
+    background-size: 340px;
+}
+
+#b1 {
+    background-image: url(bgback111.jpg);
+    background-size: 350px 500px;
+}
+
+#b2 {
+    background-image: url(bgback222.jpg);
+    background-size: 342px;
+}
+
+#b3 {
+    background-image: url(bgback3333.jpg);
+    background-size: 340px;
+}
+
+#b4 {
+    background-image: url(bgback4444.jpg);
+    background-size: 340px;
+}
+
+#f4 {
+    background-image: url(bgfront4444.jpg);
+    background-size: 350px;
+}

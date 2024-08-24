@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/41ee805f8d.js" crossorigin="anonymous"></script>
+    <style>
+        @media only screen and (max-width: 900px) {
+            body {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+        <script>
+            // JavaScript untuk menampilkan alert jika lebar layar kurang dari 1000px
+            function checkScreenWidth() {
+                if (window.innerWidth <= 900) {
+                    alert("Maaf, karena alasan kerapian konten, website ini hanya bisa dibuka dengan menggunakan mode dekstop.");
+                    document.body.innerHTML = ""; // Mengosongkan konten halaman
+                }
+            }
+    
+            // Cek ukuran layar saat halaman dimuat
+            checkScreenWidth();
+    
+            // Cek ulang saat ukuran layar diubah
+            window.onresize = checkScreenWidth;
+        </script>
+        
+    <audio src="Romantic Happy Birthday (Arranged by Miranda Wong) Piano Cover(MP3_160K).mp3" autoplay loop></audio>
+    <div class="container">
+        <div class="bubbles">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+        </div>
+    </div>
+
+    <!-- Previous Button -->
+    <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+
+    <!-- Book -->
+    <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                </div>
+            </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                </div>
+            </div>
+        </div>
+        <!-- Paper 4 -->
+        <div id="p4" class="paper">
+            <div class="front">
+                <div id="f4" class="front-content">
+                   
+                </div>
+            </div>
+            <div class="back">
+                <div id="b4" class="back-content">
+                    <div>
+                        <video width="100%" height="400px" autoplay loop muted
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); ">
+                            <source src="videoback3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Next Button -->
+    <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+
+</body>
+
+</html>
